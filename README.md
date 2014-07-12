@@ -10,6 +10,7 @@ This is the repoistory for Dan's blog.
 Two processes must be run. The first is docpad, which serves and regenerates the site on file changes. The second is gulp, which will rebuild CSS and JS files when changed.
 
 In two separate terminal tabs / windows, run:
+
 1. `docpad run`
 2. `gulp`
 

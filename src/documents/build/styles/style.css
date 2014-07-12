@@ -1,0 +1,16 @@
+/* =========================================================================
+ *
+ * main.scss
+ *  Main site entry point
+ * 
+ * ========================================================================= */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lora', serif;
+  height: 100%;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif; }

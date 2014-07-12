@@ -1,37 +1,38 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com/) skeleton for [DocPad](https://github.com/bevry/docpad)
-Bare essentials for building a modern website with best practices
+# Dan's Blog
+
+This is the repoistory for Dan's blog.
+
+## Setup
+1. If gulp is not installed globally yet, run `sudo npm install gulp -g`
+2. Run `npm install`
+
+## Usage
+Two processes must be run. The first is docpad, which serves and regenerates the site on file changes. The second is gulp, which will rebuild CSS and JS files when changed.
+
+In two separate terminal tabs / windows, run:
+1. `docpad run`
+2. `gulp`
 
 
-## Getting Started
+## Editing Files
+Files to edit are in the `src` folder. The `out` folder contains the built, static version of the site which can be uploaded to S3.
 
-1. [Install DocPad](https://github.com/bevry/docpad)
+Files which handle individual pages (e.g., an about page) are located in src/documents. 
 
-1. Clone the project and run the server
+### Adding new posts
+To add a new post, add a new file in `src/documents/posts`. The post will be automatically rendered. You can use markdown by giving the filename a .html.md extension (e.g., `post-title.html.md`). Each file in the `posts` directory is an individual post. All posts files must contain a meta header, denoted by a group wrapped by three hyphens. E.g., 
 
-	``` bash
-	git clone git://github.com/docpad/html5-boilerplate.docpad.git
-	cd html5-boilerplate.docpad
-	npm install
-	docpad run
-	```
+    ---
 
-1. [Open http://localhost:9778/](http://localhost:9778/)
+    layout: "content"
 
-1. Start hacking away by modifying the `src` directory
+    title: "Post Title"
+
+    description: "Some short description"
+
+    date: "2014-07-12"
+
+    ---
 
 
-## License
 
-This skeleton is made ["public domain"](http://en.wikipedia.org/wiki/Public_domain) using the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/), as such before you publish your website you should place your desired license here and within the `LICENSE.md` file.
-
-If you are wanting to open-source your website, we suggest using the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) for content and the [MIT License](http://creativecommons.org/licenses/MIT/) for code. In which case you'd probably want to use the following as your license:
-
-	Unless stated otherwise, all content is licensed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) and code licensed under the [MIT License](http://creativecommons.org/licenses/MIT/), © [Your Name](http://your.website)
-
-If you are wanting to close-source your website, we'd suggest using the following:
-
-	Copyright [Your Name](http://your.website). All rights reserved.
-
-Other included things such as themes and libraries are likely already licensed by their own invidual licenses, so be sure to respect their licenses too.
-
-Thanks, the DocPad team loves you.

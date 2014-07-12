@@ -1,6 +1,7 @@
 ---
 layout: 'default'
 ---
+<h1>Greenears Blog</h1>
 
 <ul>
 	<% for post in @getCollection('posts').sortArray(date: -1): %>

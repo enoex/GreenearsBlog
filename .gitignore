@@ -1,2 +1,14 @@
 node_modules/
 out/
+
+.DS_Store
+.sass-cache
+*.swp
+dump.rdb
+
+static/ai-psd/*
+
+out
+
+node_modules
+npm-debug.log

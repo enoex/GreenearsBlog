@@ -22,8 +22,24 @@
 
 </head>
 <body>
+    <div id='content'>
 
-	<%- @content %>
+        <div id='branding'>
+            <a href='/'>
+                <div class='logo'>
+                    <img class='ear' src='/images/pointy-ear.svg' /> 
+                </div>
+                <h1>
+                    Greenears Blog
+                </h1>
+            </a>
+            <span class='name'>
+                < Daniel Grenier >
+            </span>
+        </div>
+
+        <%- @content %>
+    </div>
 
 	<!-- DocPad Scripts + Our Own -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>

@@ -1,8 +1,15 @@
 ---
 layout: default
 ---
+<div class='page-post'>
+    <h1 class='post-title'>
+        <%- @document.title or @document.name %>
+    </h1>
+    <div class='post-date'>
+        Posted on <%= @moment(@document.date).format('MMMM Do, YYYY') %>
+    </div>
 
-<h2><a href="<%= @document.url %>"><%- @document.title or @document.name %></a></h2>
-<div>
-	<%- @content %>
+    <div class='post-content'>
+        <%- @content %>
+    </div>
 </div>

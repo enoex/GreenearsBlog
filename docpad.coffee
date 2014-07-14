@@ -1,6 +1,11 @@
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
+require('docpad-plugin-moment')
+
 docpadConfig = {
+
+    regenerateDelay: 0
+    watchOptions: catchupDelay: 0
 
 	# =================================
 	# Template Data
@@ -17,27 +22,22 @@ docpadConfig = {
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
-				'www.website.com',
-				'website.herokuapp.com'
 			]
 
 			# The default title of our website
-			title: "Your Website"
+			title: "Greenears Blog"
 
 			# The website description (for SEO)
 			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
 				"""
 
 			# The website's styles
 			styles: [
 				'/vendor/normalize.css'
-				'/vendor/h5bp.css'
 				'/build/styles/style.css'
 			]
 
@@ -47,6 +47,16 @@ docpadConfig = {
 				<!-- jQuery -->
 				<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 				<script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\\/script>')</script>
+                <script>
+                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                  ga('create', 'UA-52797551-1', 'auto');
+                  ga('send', 'pageview');
+
+                </script>
 				"""
 
 				'/vendor/log.js'
@@ -97,7 +107,6 @@ docpadConfig = {
 		posts: ->
 			@getCollection('documents').findAllLive({relativeOutDirPath: 'posts'})
 
-
 	# =================================
 	# Environments
 
@@ -114,6 +123,12 @@ docpadConfig = {
 				site:
 					url: false
 
+    plugins:
+      moment:
+        formats: [
+          {raw: 'date', format: 'MMMM Do YYYY', formatted: 'humanDate'}
+          {raw: 'date', format: 'YYYY-MM-DD', formatted: 'computerDate'}
+        ]
 
 	# =================================
 	# DocPad Events

@@ -4,17 +4,116 @@
  *  Main site entry point
  * 
  * ========================================================================= */
+@import "colors";
+
  *, *:before, *:after { box-sizing: border-box; }
 
 body {
+    -webkit-font-smoothing: antialiased;
+
+    background: $color-background;
+    border-top: 14px solid $color-contrast-1;
+    color: $color-foreground;
 	font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 1.5;
 	height: 100%;
 	margin: 0;
 }
 
 a {
+    text-decoration: none;
+    border-bottom: 1px solid $color-link;
+    color: $color-link;
+}
+a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
+}
+
+
+// --------------------------------------
+//
+// Layout
+//
+// --------------------------------------
+#content {
+    font-size: 1.2em;
+    width: 41em;
+    margin: 0 auto;
+}
+
+#branding { 
+    display: block;
+
+    font-size: 0.85em;
+    margin: 2em 0 3em 0;
+
+    overflow: auto;
+    position: relative;
+    width: 100%;
+
+    .logo {
+        float: left;
+        margin: 0 1em 0 0;
+
+        img {
+            height: 52px;
+            width: 39px;
+        }
+    }
+
+    h1 {
+        float: left;
+        margin: 0 0.7em 0 0;
+    }
+
+    .name {
+        float: left;
+        font-size: 0.9em;
+        font-style: italic;
+        margin-top: 1.1em;
+    }
+}
+
+// --------------------------------------
+//
+// Pages 
+//
+// --------------------------------------
+.home {
+    .post-title {
+        margin: auto 0 0.2em 0;
+        font-size: 2.3em;
+    }
+
+    .post-description {
+        text-align: justify;
+        text-indent: 2.25em;
+        margin-bottom: 1.5em;
+    }
+}
+
+.home .post-date, .post-date {
+    color: $color-foreground-light;
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 0 0 1.7em;
+}
+
+.page-post {
+    .post-title {
+        border-bottom: 1px solid $color-background;
+        margin-bottom: 0.2em;
+        font-size: 2.3em;
+    }
+
+    .post-content {
+        margin: 0.7em 0 0 0;
+        h1 {
+            font-size: 1.5em;
+        }
+    }
 }

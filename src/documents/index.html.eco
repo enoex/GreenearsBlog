@@ -1,13 +1,18 @@
 ---
 layout: 'default'
 ---
-<h1>Greenears Blog</h1>
+<div class='home'>
+        <% for post in @getCollection('posts').sortArray(date: -1): %>
 
-<ul>
-	<% for post in @getCollection('posts').sortArray(date: -1): %>
-	<li>
-		<h3><a href="<%= post.url %>"><%- post.title or post.name %></a></h3>
-		<%- post.description %>
-	</li>
-	<% end %>
-</ul>
+            <h2 class='post-title'>
+                <a href="<%= post.url %>"><%- post.title or post.name %></a>
+            </h2>
+            <div class='post-date'>
+                Posted on <%= @moment(post.date).format('MMMM Do, YYYY') %>
+            </div>
+
+            <div class='post-description'>
+                <%- post.description %>
+            </div>
+        <% end %>
+</div>

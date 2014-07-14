@@ -14,7 +14,7 @@
     "docpad": "~6.64.0",
     "docpad-plugin-eco": "~2.0.3",
     "docpad-plugin-marked": "~2.2.1",
-    "docpad-plugin-moment": "~2.0.2",
+    "docpad-plugin-moment": "^2.0.2",
     "docpad-plugin-partials": "~2.9.0",
     "gulp": "^3.8.1",
     "gulp-concat": "^2.2.0",

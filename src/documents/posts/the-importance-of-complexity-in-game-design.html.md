@@ -21,7 +21,6 @@ Then, a friend whose opinion I value very highly began to give me input on the g
 
 I took one feature I was very fond of from a previous project and decided to make a whole game around it.  I did only the minimum work and made it playable as quickly as possible.  Over the course of one weekend, I built a tiny, bite-sized game infinitely more enjoyable than the one I had spent two years building to monolithic proportions.
 
-___
 
 ### The moral of the story
 

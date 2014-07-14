@@ -7,14 +7,14 @@
 *, *:before, *:after {
   box-sizing: border-box; }
 
-body {
+html, body {
   -webkit-font-smoothing: antialiased;
   background: #fefefe;
   border-top: 14px solid #3A7347;
   color: #101020;
   font-family: 'Lora', serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 2.2;
   height: 100%;
   margin: 0; }
 
@@ -23,13 +23,28 @@ a {
   border-bottom: 1px solid #3A7347;
   color: #3A7347; }
 
+a:hover {
+  border-bottom: 2px solid #3A7347; }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+li {
+  margin-bottom: 1.5em; }
 
 #content {
   font-size: 1.2em;
+  margin: 0 auto;
+  min-height: 100%;
   width: 41em;
-  margin: 0 auto; }
+  margin-bottom: 5em; }
 
 #branding {
   display: block;
@@ -53,6 +68,19 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic;
     margin-top: 1.1em; }
 
+#footer {
+  color: #f0f0f0;
+  background: #3A7347;
+  height: 80px;
+  padding: 2em 0 0 0;
+  text-align: center; }
+  #footer .inner {
+    margin: 0 auto;
+    width: 41em; }
+  #footer a {
+    color: #f0f0f0;
+    margin: 0 2em; }
+
 .home .post-title {
   margin: auto 0 0.2em 0;
   font-size: 2.3em; }
@@ -73,5 +101,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.3em; }
 .page-post .post-content {
   margin: 0.7em 0 0 0; }
+  .page-post .post-content p {
+    margin: 1.2em 0; }
   .page-post .post-content h1 {
     font-size: 1.5em; }
+  .page-post .post-content h2, .page-post .post-content h3, .page-post .post-content h4 {
+    margin-top: 1.8em; }

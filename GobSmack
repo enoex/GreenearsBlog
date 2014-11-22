@@ -1,0 +1,12 @@
+<html>
+<body>
+
+<script>
+setTimeout(function() {
+    window.location = 'https://itunes.apple.com/app/id936276575';
+}, 600);
+
+window.location = 'GobSmack://'; 
+</script>
+</body>
+</html>

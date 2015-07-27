@@ -7,7 +7,7 @@ This is the repoistory for Dan's blog.
 2. Run `npm install`
 
 
-NOTE: You may need to `sudo npm install node-sass -g`
+NOTE: You may need to `sudo npm install node-sass -g`. You may need to `sudo npm install docpad -g`
 
 ## Usage
 Two processes must be run. The first is docpad, which serves and regenerates the site on file changes. The second is gulp, which will rebuild CSS and JS files when changed.

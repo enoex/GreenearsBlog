@@ -1,12 +1,6 @@
-/* =========================================================================
- *
- * main.scss
- *  Main site entry point
- * 
- * ========================================================================= */
 @import "colors";
 
- *, *:before, *:after { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: border-box; }
 
 html, body {
     -webkit-font-smoothing: antialiased;

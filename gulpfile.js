@@ -57,6 +57,10 @@ gulp.task('sass', function () {
     gulp.src(paths.css)
         .pipe(sass())
         .pipe(gulp.dest('./src/documents/build/styles/'));
+
+    gulp.src(paths.css)
+        .pipe(sass())
+        .pipe(gulp.dest('./src/documents/styles/'));
 });
 
 // Watch
